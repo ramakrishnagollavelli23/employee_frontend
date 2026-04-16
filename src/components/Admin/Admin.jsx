@@ -10,7 +10,7 @@ import { toast } from 'react-toastify'
 
 const Admin = () => {
 
-  const API = import.meta.env.REACT_APP_BACKEND_URL;
+  const API = import.meta.env.VITE_BACKEND_URL;
   const { allEmps, navigate } = useContext(ContextStore)
   const [allEmpsDuplicate, setAllEmpsDuplicate] = useState(null)
   const [searchString, setSearchString] = useState('')

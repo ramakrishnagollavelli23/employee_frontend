@@ -6,7 +6,7 @@ import ContextStore from '../../context/ContextStore'
 
 const RegisterEmployee = () => {
 
-    const API = import.meta.env.REACT_APP_BACKEND_URL;
+    const API = import.meta.env.VITE_BACKEND_URL;
     const { navigate } = useContext(ContextStore)
 
     const [registerDetails, setRegisterDetails] = useState({

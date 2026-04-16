@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 
 const UpdateEmployee = () => {
 
-    const API = import.meta.env.REACT_APP_BACKEND_URL;
+    const API = import.meta.env.VITE_BACKEND_URL;
     const { allEmps, navigate } = useContext(ContextStore)
     const { id } = useParams()
     const updateEmployee = !allEmps ? "" : allEmps.find(e => e.empId === Number(id))
