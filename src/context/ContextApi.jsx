@@ -39,7 +39,7 @@ const ContextApi = (props) => {
         if (loginStatus) {
             fetchAllEmpData()
         }
-    }, [loginStatus])
+    }, [loginStatus,updateStatus])
 
     const contextValues = {
         formName,
