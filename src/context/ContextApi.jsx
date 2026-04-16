@@ -11,10 +11,12 @@ const ContextApi = (props) => {
     const navigate = useNavigate()
     const [employee, setEmployee] = useState(null)
     const [loginStatus, setLoginStatus] = useState(false)
+    const [updateStatus, setUpdateStatus] = useState(true)
 
     const fetchData = async (id) => {
-        await axios.get(`${API}/api/employee/get/${id}`)
-            .then(result => setEmployee(result.data))
+        if (updateStatus)
+            await axios.get(`${API}/api/employee/get/${id}`)
+                .then(result => setEmployee(result.data))
     }
 
     useEffect(() => {
@@ -22,8 +24,9 @@ const ContextApi = (props) => {
         if (sessionStoreData) {
             setLoginStatus(true)
             fetchData(sessionStoreData.empId)
+            setUpdateStatus(false)
         }
-    }, [loginStatus]);
+    }, [loginStatus,updateStatus]);
 
     const [allEmps, setAllEmps] = useState(null)
     const fetchAllEmpData = async () => {
@@ -48,6 +51,8 @@ const ContextApi = (props) => {
         setLoginStatus,
         allEmps,
         setAllEmps,
+        updateStatus,
+        setUpdateStatus
     }
 
     return (

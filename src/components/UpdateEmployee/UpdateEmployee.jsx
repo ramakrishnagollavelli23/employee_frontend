@@ -7,7 +7,7 @@ import { toast } from 'react-toastify'
 const UpdateEmployee = () => {
 
     const API = import.meta.env.VITE_BACKEND_URL;
-    const { allEmps, navigate } = useContext(ContextStore)
+    const { allEmps, navigate, setUpdateStatus } = useContext(ContextStore)
     const { id } = useParams()
     const updateEmployee = !allEmps ? "" : allEmps.find(e => e.empId === Number(id))
     const [updateEmpDetails, setUpdateEmpDetails] = useState({
@@ -34,7 +34,7 @@ const UpdateEmployee = () => {
                 if (result.status === 200) {
                     toast.success("Update success...")
                     navigate(`/admin/emp/${id}`)
-                    window.location.reload()
+                    setUpdateStatus(true)
                 } else {
                     toast.warn("Check employee details")
                 }
