@@ -1,0 +1,72 @@
+.registeremployee {
+    min-height: 85vh;
+}
+
+.registerform {
+    width: 60%;
+    margin: 10px auto 30px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.registerform>h1 {
+    margin: 14px 0px;
+    text-align: center;
+    color: rgba(0, 99, 185);
+}
+
+.form .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 10px;
+    margin: 20px 0px 10px;
+}
+
+.form .input {
+    width: 100%;
+    margin: 3px 0px;
+}
+
+.form .input>label {
+    font-size: 15px;
+}
+
+.form .input>input {
+    margin-top: 8px;
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 15px;
+    outline: none;
+    border: 1px solid rgba(0, 99, 185);
+    border-radius: 5px;
+}
+
+@media screen and (max-width:1200px) {
+
+    .registerform {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+
+    .registerform {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+
+    .registerform {
+        width: 90%;
+    }
+
+    .form .grid {
+        grid-template-columns: 1fr;
+    }
+
+}

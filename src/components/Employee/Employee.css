@@ -1,0 +1,143 @@
+.employee {
+    width: 85%;
+    margin: 0px auto;
+    padding: 20px 0px;
+    min-height: calc(86vh + 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emp-left {
+    flex-basis: 40%;
+    height: 100%;
+    border-right: 1px solid #00000047;
+    padding: 0px 10px;
+}
+
+.emp-right {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-transform: capitalize;
+    padding: 0px 40px;
+}
+
+.emp-left-img {
+    height: 65%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #00000058;
+}
+
+.emp-left-img>img {
+    width: 100%;
+    height: 100%;
+}
+
+.emp-left-content {
+    height: 35%;
+    padding: 30px 40px;
+    text-transform: capitalize;
+}
+
+.emp-data {
+    display: flex;
+    align-items: center;
+    padding: 8px 3px;
+    margin: 5px 0px;
+    font-size: 18px;
+}
+
+.emp-data>p,
+.emp-right>.emp-data>p,
+.emp-data>label {
+    flex-basis: 50%;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+}
+
+.load {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 99, 185);
+    border-left-color: transparent;
+    animation: rotate360 infinite .5s;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:1200px) {
+
+    .employee {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width:1040px) {
+
+    .employee {
+        width: 98%;
+    }
+
+    .emp-data {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+
+    .employee {
+        flex-direction: column;
+    }
+
+    .emp-left,
+    .emp-right {
+        width: 80%;
+        border-right: none;
+    }
+
+    .emp-right {
+        padding: 0px 15px;
+    }
+
+    .emp-left-content {
+        padding: 30px 0px;
+    }
+
+    .emp-data {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+
+    .emp-left,
+    .emp-right {
+        width: 85%;
+    }
+
+    .emp-data {
+        font-size: 16px;
+    }
+
+}

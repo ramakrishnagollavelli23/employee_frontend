@@ -1,0 +1,144 @@
+.header {
+    position: relative;
+    height: 88.7vh;
+    overflow: hidden;
+}
+
+.header>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+@keyframes opacity-anime {
+    from {
+        opacity: 0;
+        transform: scale(2);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.header-content {
+    animation: opacity-anime 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
+.header-content h1 {
+    font-size: 55px;
+    margin-bottom: 18px;
+    color: rgb(0, 98, 185);
+}
+
+.header-content p {
+    width: 70%;
+    font-size: 17px;
+}
+
+.btns {
+    display: flex;
+    gap: 50px;
+    margin: 25px 0px;
+}
+
+.btns button {
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1200px) {
+    .header-content {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:1040px) {
+    .header-content h1 {
+        font-size: 50px;
+    }
+
+    .header-content p {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .header-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .header-content h1 {
+        font-size: 42px;
+    }
+
+    .header-content p {
+        font-size: 15px;
+    }
+
+    .header-content {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header-content h1 {
+        font-size: 35px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+    }
+
+    .header-content {
+        width: 90%;
+    }
+
+    .btns button {
+        padding: 5px 14px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-content p {
+        font-size: 13px;
+    }
+
+    .header-content {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .header-content h1 {
+        font-size: 35px;
+    }
+
+    .btns button {
+        font-size: 14px;
+    }
+}
