@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 
 const Login = () => {
 
-  const API = import.meta.env.REACT_APP_BACKEND_URL;
+  const API = import.meta.env.VITE_BACKEND_URL;
   const { formName, navigate, setLoginStatus } = useContext(ContextStore)
   const [formState, setFormState] = useState("Login")
   const [loginCrediancials, setLoginCrediancials] = useState({
